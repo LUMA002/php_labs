@@ -1,0 +1,123 @@
+:root {
+    --primary-color: #3a8739;
+    --secondary-color: #f89c1c;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --white: #ffffff;
+    --shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, dl, dt, dd, 
+ol, ul, li, form, table, caption, tr, th, td, article, aside, footer, header{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-grow: 1;
+    width: 100%;
+    gap: 50px;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: var(--white);
+    padding: 1.5em;
+    margin-left: 0;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    align-self: flex-start;
+}
+
+.sidebar p {
+    font-size: larger;
+}
+
+ul li {
+    margin: 0.5em auto;
+    text-align: left;
+    list-style-type: none;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content {
+    width: 75%;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+footer {
+    width: 100%;
+    height: 5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: auto;
+}
