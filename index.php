@@ -8,20 +8,12 @@
 </head>
 <body>
 
-<?php require_once 'header.php'; ?>
+<?php require_once './layout/header.php'; ?>
 
-<div class="container">
-    <div class="main-content">
-        <?php require_once 'left_menu.php'; ?>
-        
-        <div class="content">
-            <h1>Ласкаво просимо!</h1>
-            <p>Цей сайт містить інформацію про користь вітамінів та мінералів.</p>
-        </div>
-    </div>
-</div>
+<?php require_once './views/main.php'; ?>
+<?php require_once './views/about.php'; ?>
 
-<?php require_once 'footer.php'; ?>
+<?php require_once './layout/footer.php'; ?>
 
 </body>
 </html>

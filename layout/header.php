@@ -4,5 +4,5 @@
 
 <nav>
     <a href="index.php" class="nav-link">Головна</a>
-    <a href="about.php" class="nav-link">Про сайт</a>
+    <a href="./views/about.php" class="nav-link">Про сайт</a>
 </nav>
