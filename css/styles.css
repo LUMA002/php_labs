@@ -1,0 +1,231 @@
+:root {
+    --primary-color: #3a8739;
+    --secondary-color: #f89c1c;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --white: #ffffff;
+    --shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    --border-radius: 10px;
+    --padding-standard: 20px;
+    --sidebar-width: 25%;
+    --content-width: 72%;
+}
+
+/* Reset styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Layout components */
+.container {
+    width: 100%;
+    padding: var(--padding-standard);
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding-standard);
+    flex-grow: 1;
+    width: 100%;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: var(--padding-standard);
+    text-align: center;
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.sidebar, .article-style {
+    background-color: var(--white);
+    width: var(--sidebar-width);
+    padding: var(--padding-standard);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    align-self: flex-start;
+}
+
+.content {
+    width: var(--content-width);
+    background-color: var(--white);
+    padding: var(--padding-standard);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+ul li {
+    margin: 0.5em auto;
+    text-align: left;
+    list-style-type: none;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer {
+    width: 100%;
+    height: 5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: auto;
+}
+
+
+/*********************************** Registration Form Styles ****************************************/
+.registration-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: var(--white);
+    padding: var(--padding-standard);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.registration-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.register-button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/****************************** Стилі для повідомлень про помилки *****************************************/
+.error-message {
+    background-color: #ffdddd;
+    color: #ff0000;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-left: 4px solid #ff0000;
+}
+
+.error-message ul {
+    margin-left: 20px;
+}
+
+.error-message li {
+    margin-bottom: 5px;
+}
+
+/* Стилі для повідомлення про успішну реєстрацію */
+.success-message {
+    background-color: #ddffdd;
+    color: #006600;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 5px;
+    text-align: center;
+    border-left: 4px solid #006600;
+}
+
+.success-message h1 {
+    color: #006600;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Стилі для підказок */
+small {
+    display: block;
+    color: #666;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Стилі для reCAPTCHA */
+.g-recaptcha {
+    margin: 10px 0;
+}
