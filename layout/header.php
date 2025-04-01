@@ -16,4 +16,9 @@
     <a href="index.php?action=main" class="nav-link">Головна</a>
     <a href="index.php?action=about" class="nav-link">Про сайт</a>
     <a href="index.php?action=registration" class="nav-link">Реєстрація</a>
+    <?php if (!isset($_SESSION['user_id'])): ?>
+        <a href="index.php?action=login" class="nav-link">Увійти</a>
+    <?php else: ?>
+        <a href="index.php?action=logout" class="nav-link">Вийти</a>
+    <?php endif; ?>
 </nav>

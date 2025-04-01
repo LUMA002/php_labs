@@ -1,7 +1,8 @@
 <?php
-session_start();
 
-// функція для очищення вхідних даних
+require_once './includes/db_config.php';
+
+// Функція для очищення вхідних даних
 function sanitize_input($data)
 {
     $data = trim($data);
@@ -9,7 +10,6 @@ function sanitize_input($data)
     $data = htmlspecialchars($data);
     return $data;
 }
-
 
 $errors = [];
 
@@ -20,19 +20,17 @@ $confirm_password = $_POST['confirm_password'] ?? '';
 $email = sanitize_input($_POST['email'] ?? '');
 $recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
 
-
 $_SESSION['form_data'] = [
     'username' => $username,
     'email' => $email
 ];
 
-// Валідація логіну
+
 if (empty($username)) {
     $errors[] = "Логін є обов'язковим";
 } elseif (!preg_match('/^[a-zA-Z0-9_-]{4,}$/', $username)) {
     $errors[] = "Логін має бути не менше 4 символів і містити тільки літери, цифри, нижнє підкреслення та дефіс";
 }
-
 
 if (empty($password)) {
     $errors[] = "Пароль є обов'язковим";
@@ -53,13 +51,14 @@ if (empty($confirm_password)) {
     $errors[] = "Паролі не співпадають";
 }
 
+
 if (empty($email)) {
     $errors[] = "Email є обов'язковим";
 } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $errors[] = "Будь ласка, введіть коректну електронну пошту";
 }
 
-// Перевірка reCAPTCHA
+
 if (empty($recaptcha_response)) {
     $errors[] = "Будь ласка, підтвердіть, що ви не робот";
 } else {
@@ -79,6 +78,36 @@ if (!empty($errors)) {
     exit();
 }
 
+$conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
-header("Location: index.php?action=registration_successful");
-exit();
+// Перевірка підключення
+if ($conn->connect_error) {
+    die("Помилка підключення до бази даних: " . $conn->connect_error);
+}
+
+
+$hashed_password = password_hash($password, PASSWORD_BCRYPT);
+
+// Додавання користувача до бази даних
+$sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("sss", $username, $email, $hashed_password);
+
+if ($stmt->execute()) {
+    // Закриття з'єднання
+    $stmt->close();
+    $conn->close();
+
+    // Успішна реєстрація
+    header("Location: index.php?action=registration_successful");
+    exit();
+} else {
+    // Закриття з'єднання
+    $stmt->close();
+    $conn->close();
+
+    // Помилка при додаванні користувача
+    $_SESSION['errors'] = ["Помилка при реєстрації. Спробуйте ще раз."];
+    header("Location: index.php?action=registration");
+    exit();
+}
