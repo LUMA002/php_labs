@@ -1,5 +1,4 @@
 <?php
-// filepath: d:\xampp\htdocs\VitaminsAndMineralsSite\views\view_item.php
 require_once './includes/db_config.php';
 
 // Отримання ID вітаміну/мінералу з URL

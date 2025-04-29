@@ -1,5 +1,4 @@
 <?php
-// filepath: d:\xampp\htdocs\VitaminsAndMineralsSite\views\delete_item.php
 require_once './includes/db_config.php';
 
 // Перевірка авторизації
@@ -64,7 +63,7 @@ $delete_stmt->close();
 $stmt->close();
 $conn->close();
 
-// Перенаправлення на список вітамінів/мінералів
+
 header("Location: index.php?action=vitamins_list");
 exit();
 ?>

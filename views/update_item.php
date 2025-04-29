@@ -1,5 +1,5 @@
 <?php
-// filepath: d:\xampp\htdocs\VitaminsAndMineralsSite\views\update_item.php
+
 require_once './includes/db_config.php';
 
 // Перевірка авторизації

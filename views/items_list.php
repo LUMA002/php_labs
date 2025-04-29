@@ -1,5 +1,4 @@
 <?php
-// filepath: d:\xampp\htdocs\VitaminsAndMineralsSite\views\items_list.php
 require_once './includes/db_config.php';
 
 $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);

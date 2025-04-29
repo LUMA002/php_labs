@@ -1,5 +1,4 @@
 <?php
-// filepath: d:\xampp\htdocs\VitaminsAndMineralsSite\views\create_item.php
 // Перевірка авторизації
 if (!isset($_SESSION['user_id'])) {
     header("Location: index.php?action=login");
