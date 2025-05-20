@@ -67,6 +67,10 @@ if ($mode === 'create') {
         $stmt->bind_param("sssssii", $name, $type, $description, $benefits, $sources, $visible, $author_id);
 
         if ($stmt->execute()) {
+            // очищення кешу після додавання запису
+            require_once './includes/cache_helper.php';
+            clearItemsCache();
+
             $_SESSION['success'] = "Новий запис успішно додано";
             header("Location: index.php?action=vitamins_list");
             exit();
@@ -149,6 +153,10 @@ else if ($mode === 'update') {
         $stmt->bind_param("sssssii", $name, $type, $description, $benefits, $sources, $visible, $id);
 
         if ($stmt->execute()) {
+            // очищення кешу після оновлення запису
+            require_once './includes/cache_helper.php';
+            clearItemsCache();
+
             $_SESSION['success'] = "Запис успішно оновлено";
             header("Location: index.php?action=vitamins_list");
             exit();

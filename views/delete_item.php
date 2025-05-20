@@ -54,10 +54,15 @@ $delete_stmt = $conn->prepare($delete_sql);
 $delete_stmt->bind_param("i", $id);
 
 if ($delete_stmt->execute()) {
+    // jчищення кешу після видалення запису
+    require_once './includes/cache_helper.php';
+    clearItemsCache();
+    
     $_SESSION['success'] = "Запис успішно видалено";
 } else {
     $_SESSION['errors'] = "Помилка при видаленні запису: " . $delete_stmt->error;
 }
+
 
 $delete_stmt->close();
 $stmt->close();

@@ -1,0 +1,110 @@
+[
+    {
+        "id": "12",
+        "name": "klasna nazva",
+        "type": "mineral",
+        "description": "wq",
+        "benefits": "wqwq",
+        "sources": "qw",
+        "visible": "0",
+        "date": "2025-05-20 10:04:01",
+        "author_id": "1",
+        "username": "luma02"
+    },
+    {
+        "id": "11",
+        "name": "TEST ADMIN",
+        "type": "vitamin",
+        "description": "SUper TEST",
+        "benefits": "MAX",
+        "sources": "HW",
+        "visible": "1",
+        "date": "2025-05-20 01:17:11",
+        "author_id": "1",
+        "username": "luma02"
+    },
+    {
+        "id": "10",
+        "name": "gdf!",
+        "type": "vitamin",
+        "description": "gd",
+        "benefits": "gdf",
+        "sources": "dfg",
+        "visible": "0",
+        "date": "2025-04-29 10:09:55",
+        "author_id": "3",
+        "username": "test"
+    },
+    {
+        "id": "9",
+        "name": "LALALALAL",
+        "type": "vitamin",
+        "description": "LAAAAAAAAAAAAA",
+        "benefits": "VEEAAAAAAAAAAAAAA",
+        "sources": "Yaaa",
+        "visible": "1",
+        "date": "2025-04-29 00:52:38",
+        "author_id": "1",
+        "username": "luma02"
+    },
+    {
+        "id": "8",
+        "name": "\u041a\u0430\u043f\u0443\u0442!",
+        "type": "vitamin",
+        "description": "\u043f\u043e\u0432\u043d\u0438\u0439!",
+        "benefits": "\u0441\u0442\u0438\u043b\u0456",
+        "sources": "\u043a\u0430\u043f\u0443\u0442",
+        "visible": "1",
+        "date": "2025-04-29 00:41:48",
+        "author_id": "1",
+        "username": "luma02"
+    },
+    {
+        "id": "5",
+        "name": "\u0426\u0438\u043d\u043a",
+        "type": "mineral",
+        "description": "\u041f\u043e\u0442\u0443\u0436\u043d\u0438\u0439 \u043c\u0456\u043d\u0435\u0440\u0430\u043b",
+        "benefits": "\u041f\u043e\u043a\u0440\u0430\u0449\u0435\u043d\u043d\u044f \u0441\u0442\u0430\u043d\u0443 \u0448\u043a\u0456\u0440\u0438, \u0437\u0430\u0433\u0430\u043b\u044c\u043d\u0438\u0439 \u0442\u043e\u043d\u0443\u0441, \u0456\u043c\u0443\u043d\u0456\u0442\u0435\u0442",
+        "sources": "\u041c\u043e\u0440\u0435\u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0438, \u043c&#039;\u044f\u0441\u043e, \u043d\u0430\u0441\u0456\u043d\u043d\u044f",
+        "visible": "1",
+        "date": "2025-04-29 00:22:32",
+        "author_id": "1",
+        "username": "luma02"
+    },
+    {
+        "id": "3",
+        "name": "\u0411\u0430\u0439\u0434\u0443\u0436\u0438\u043d",
+        "type": "mineral",
+        "description": "\u0420\u043e\u0431\u0438\u0442\u044c \u044e\u0437\u0435\u0440\u0430 \u0431\u0430\u0439\u0434\u0443\u0436\u0438\u043c, \u0435\u043a\u043e\u043d\u043e\u043c\u0438\u0442\u044c \u043d\u0435\u0440\u0432\u043e\u0432\u0438\u0439 \u0442\u0440\u0430\u0444\u0456\u043a",
+        "benefits": "\u041d\u0435\u0434\u043e\u043e\u0446\u0456\u043d\u0435\u043d\u043d\u0430",
+        "sources": "*\u0441\u0435\u043a\u0440\u0435\u0442*",
+        "visible": "1",
+        "date": "2025-04-29 00:19:53",
+        "author_id": "1",
+        "username": "luma02"
+    },
+    {
+        "id": "2",
+        "name": "\u042e\u0437\u0435\u0440\u0441\u044c\u043a\u0438\u0439 \u0432\u0456\u0442\u0430\u043c\u0456\u043d \u0410\u0410\u0410\u0410\u0410\u0410\u0410\u0410\u0410\u0410\u0410",
+        "type": "vitamin",
+        "description": "\u0414\u0443\u0436\u0435 \u0410\u0410\u0410\u0410\u0410\u0410\u0410\u0410\u0410\u0410\u0410\u0410\u0447\u0443\u0434\u043e\u0432\u0438\u0439",
+        "benefits": "\u0421\u0443\u043f\u0435\u0440 \u043a\u043e\u0440\u0438\u0441\u043d\u0438\u0439",
+        "sources": "\u0422\u0443\u043d\u0435\u0446\u044c, \u043c\u0430\u0430\u0430\u0430\u0430\u0430\u0430\u043d\u0433\u043e",
+        "visible": "0",
+        "date": "2025-04-29 00:12:42",
+        "author_id": "3",
+        "username": "test"
+    },
+    {
+        "id": "1",
+        "name": "Vitamin D",
+        "type": "vitamin",
+        "description": "\u0412\u0456\u0442\u0430\u043c\u0456\u043d \u0441\u043e\u043d\u0446\u044f!",
+        "benefits": "\u041c\u0430\u043a\u0441\u0438\u043c\u0430\u043b\u044c\u043d\u0430",
+        "sources": "\u0412\u0443\u043b\u0438\u0446\u044f",
+        "visible": "1",
+        "date": "2025-04-29 00:09:12",
+        "author_id": "1",
+        "username": "luma02"
+    }
+]
